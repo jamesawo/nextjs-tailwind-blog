@@ -3,9 +3,9 @@ import {ITag} from "../../lib/types/data.interface";
 
 
 const DUMMY_TAGS: ITag[] = [
-    {showHash: false, text: 'web', link: ''},
-    {showHash: false, text: 'design patterns', link: ''},
-    {showHash: false, text: 'tech news', link: ''},
+    {showHash: false, text: 'web'},
+    {showHash: false, text: 'design patterns'},
+    {showHash: false, text: 'tech news'},
 ];
 
 const BookmarkIntro = () => {

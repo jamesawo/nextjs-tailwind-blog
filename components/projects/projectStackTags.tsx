@@ -16,7 +16,7 @@ const ProjectStackTags = ({stacks}: Props) => {
                 <div className="flex flex-row flex-wrap gap-1">
                     {stacks && stacks.length > 0 ?
                         (stacks.map((tag, index) => (
-                                <Tag key={index} text={tag.text} showHash={tag.showHash} link={tag.link}/>
+                                <Tag key={index} text={tag.text} showHash={tag.showHash} />
                             ))
                         ) :
                         <div/>

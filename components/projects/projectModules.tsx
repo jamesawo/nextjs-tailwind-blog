@@ -19,7 +19,7 @@ const ProjectModules = ({modules}: Props) => {
                   <div className="flex flex-row flex-wrap gap-1">
                       {
                           modules.map( (module, index) => (
-                              <Tag key={index} text={module.text} showHash={module.showHash} link={module.link} />
+                              <Tag key={index} text={module.text} showHash={module.showHash}  />
                           ) )
                       }
                   </div>

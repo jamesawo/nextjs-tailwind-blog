@@ -1,4 +1,4 @@
-import {ITag} from "../_data/data.interface";
+import {ITag} from "../../lib/types/data.interface";
 import Tag from "../shared/tag";
 
 type Props = {

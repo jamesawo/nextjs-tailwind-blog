@@ -26,7 +26,7 @@ const BookmarkTag = ({bookmark}: Props) => {
                     {
                         bookmark.tags && bookmark.tags.length > 0 ?
                             bookmark.tags.map((tag, index) => (
-                                <Tag key={index} text={tag.text} showHash={tag.showHash} link={tag.link}/>)
+                                <Tag key={index} text={tag.text} showHash={tag.showHash} />)
                             )
                             : (<div/>)
                     }
