@@ -22,7 +22,7 @@ async function handler(
             const id: string = slug as string;
             const result = await collection.findOne({_id: new ObjectId(id)});
 
-            client.close();
+            client.close().then();
             res.status(200).send({message: 'Post Saved Successfully!', data: result});
         }
     } catch (e) {

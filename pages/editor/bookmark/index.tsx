@@ -8,11 +8,9 @@ import {DUMMY_BOOKMARKS} from "../../../lib/data/data";
 
 const EditorBookmarkIndex = () => {
     const handleEdit = (id: string): void => {
-        console.log('editing post with ID: ', id)
     }
 
     const handleDelete = (id: string) => {
-        console.log('delete handler clicked id: ', id);
     }
 
     const getPostData: () => IListAction[] = () => {

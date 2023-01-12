@@ -19,7 +19,7 @@ async function handler(
 
             const collection = db.collection(POST_COLLECTION);
             const result = await collection.insertOne({...req.body, created_at: new Date()});
-            client.close();
+            client.close().then();
             res.status(201).send({message: 'Post Saved Successfully!', data: {id: result.insertedId}});
         }
     } catch (e) {
