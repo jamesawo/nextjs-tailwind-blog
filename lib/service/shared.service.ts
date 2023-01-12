@@ -5,10 +5,7 @@ export function isProduction(): boolean{
 }
 
 export function getBaseUrl(): string {
-    if (isProduction()){
-        return process.env.SERVER_URL ?? '';
-    }
-    return 'http://localhost:3000';
+    return process.env.SERVER_URL ?? '';
 }
 
 

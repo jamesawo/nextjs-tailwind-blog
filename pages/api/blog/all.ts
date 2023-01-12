@@ -17,7 +17,7 @@ async function handler(
             const db = client.db(Connection.getDbName());
 
             const result = await db.collection(POST_COLLECTION).find({}).sort ( { created_at: -1 } ).toArray();
-            client.close();
+            client.close().then();
             res.status(200).send({message: 'Posts Retrieved Successfully!', data: result});
         }
     } catch (e) {

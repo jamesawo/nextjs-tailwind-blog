@@ -21,14 +21,14 @@ export default Blog;
 export async function getStaticProps(context: any) {
     const posts = await BlogService.getPosts();
 
-    if (!posts.length) {
-        return {
-            redirect: {
-                permanent: false,
-                destination: "/404",
-            },
-        };
-    }
+    // if (!posts.length) {
+    //     return {
+    //         redirect: {
+    //             permanent: false,
+    //             destination: "/404",
+    //         },
+    //     };
+    // }
 
     return {
         props: {

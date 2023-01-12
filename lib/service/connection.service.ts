@@ -1,6 +1,5 @@
 import {MongoClient} from "mongodb";
 import * as process from "process";
-import { isProduction } from "./shared.service";
 
 export class Connection {
     /**
@@ -35,10 +34,7 @@ export class Connection {
      * mongodb client instance
      */
     public getMongoClient(): Promise<MongoClient> {
-        if (isProduction()) {
-            return Connection.getProdConnection();
-        }
-        return Connection.getLocalConnection();
+        return Connection.connect();
     }
 
     public static async getMongoDbClientInstance(): Promise<MongoClient> {
@@ -50,14 +46,8 @@ export class Connection {
         return process.env.MONGO_DB_NAME ?? 'store';
     }
 
-    private static async getLocalConnection(): Promise<MongoClient> {
-        let client = new MongoClient(`mongodb://localhost:27017`);
-        await client.connect();
-        return client;
-    }
-
-    private static async getProdConnection(): Promise<MongoClient> {
-        const connectionString = process.env.MONGO_DB_URI ?? '';
+    private static async connect(): Promise<MongoClient> {
+        const connectionString = process.env.MONGO_DB_URI!;
         let client = new MongoClient(connectionString);
         await client.connect();
         return client;

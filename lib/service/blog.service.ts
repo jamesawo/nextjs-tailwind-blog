@@ -55,12 +55,17 @@ export class BlogService {
     }
 
     public static async getPosts(): Promise<IBlogPost[]> {
-        const response = await fetch(`${getBaseUrl()}/api/blog/all`);
-        if (!response.ok) {
+        try{
+            const response = await fetch(`${getBaseUrl()}/api/blog/all`);
+            if (!response.ok) {
+                return [];
+            }
+            const result: IResponse<IBlogPost[]> = await response.json();
+            return result.data;
+        }catch (e) {
+            console.log(e);
             return [];
         }
-        const result: IResponse<IBlogPost[]> = await response.json();
-        return result.data;
     }
 
 }
