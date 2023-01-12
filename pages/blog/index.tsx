@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import BlogIntro from "../../components/blog/blogIntro";
 import BlogPosts from "../../components/blog/blogPosts";
 import {BlogService} from "../../lib/service/blog.service";
@@ -12,6 +13,7 @@ const Blog = ({posts}: Props) => {
         <>
             <BlogIntro/>
             <BlogPosts posts={posts}/>
+            <Analytics />
         </>
     );
 }

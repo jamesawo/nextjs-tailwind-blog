@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import ProjectIntro from "../components/projects/projectIntro";
 import ProjectsList from "../components/projects/projectsList";
 import {DUMMY_PROJECTS} from "../lib/data/data";
@@ -7,6 +8,7 @@ const Project = ( ) => {
        <>
            <ProjectIntro />
            <ProjectsList projects={DUMMY_PROJECTS} />
+           <Analytics />
        </>
     );
 }

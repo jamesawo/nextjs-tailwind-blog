@@ -12,6 +12,7 @@
   "dependencies": {
     "@types/react": "18.0.25",
     "@types/react-dom": "18.0.9",
+    "@vercel/analytics": "^0.1.7-beta.1",
     "eslint": "8.27.0",
     "eslint-config-next": "13.0.4",
     "mongodb": "^4.12.1",

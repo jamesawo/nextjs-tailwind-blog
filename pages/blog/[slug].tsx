@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import MarkdownPreview from "../../components/shared/markdownPreview";
 import {IBlogPost} from "../../lib/types/data.interface";
 import {BlogService} from "../../lib/service/blog.service";
@@ -10,6 +11,7 @@ type Props = {
 const Detail = ({post}: Props) => {
   return (
       <>
+          <Analytics />
           <Seo
               seoDescription={post.content.slice(0, 250)}
               seoTitle={post.title.slice(0,50) + '...'}
