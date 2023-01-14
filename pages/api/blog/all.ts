@@ -15,8 +15,7 @@ async function handler(
         if (req.method === 'GET') {
             const client = await Connection.getMongoDbClientInstance();
             const db = client.db(Connection.getDbName());
-
-            const result = await db.collection(POST_COLLECTION).find({}).sort ( { created_at: -1 } ).toArray();
+            const result = await db.collection(POST_COLLECTION).find({}).sort({created_at: -1}).toArray();
             client.close().then();
             res.status(200).send({message: 'Posts Retrieved Successfully!', data: result});
         }

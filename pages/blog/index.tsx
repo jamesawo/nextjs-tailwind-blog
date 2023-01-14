@@ -3,6 +3,7 @@ import BlogIntro from "../../components/blog/blogIntro";
 import BlogPosts from "../../components/blog/blogPosts";
 import {BlogService} from "../../lib/service/blog.service";
 import {IBlogPost} from "../../lib/types/data.interface";
+import {DUMMY_PROJECTS} from "../../lib/data/data";
 
 type Props = {
     posts: IBlogPost[];
