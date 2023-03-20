@@ -4,6 +4,7 @@ This is a simple personal / blog website built using
 
 -   [Next.js](https://nextjs.org/),
 -   [Tailwindcss](https://tailwindcss.com/)
+-   [Mongodb](https://www.mongodb.com/)
 -   and deployed on [Vercel](https://vercel.com).
 
 The website is intended for developers / bloggers who want a simple, customizable platform to publish their content.
@@ -40,11 +41,15 @@ To run this project locally, you need to have the following installed on your co
 
 `npm install`
 
-4.  Run the development server
+5.  Update .env properties
+
+`cp example.env .env`
+
+6.  Run the development server
 
 `npm run dev`
 
-5.  Open your browser and navigate to `http://localhost:3000`
+7.  Open your browser and navigate to `http://localhost:3000`
 
 ## Deployment
 
