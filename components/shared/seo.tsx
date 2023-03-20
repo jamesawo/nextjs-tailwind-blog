@@ -24,9 +24,7 @@ const Seo = ({seoTitle, seoDescription}: Props) => {
             <Head>
                 <title>{pageTitle}</title>
                 <meta name="description" content={description}/>
-                <meta
-                    name="keywords"
-                    content={`${author} software engineer, fullstack, daily brand`}
+                <meta name="keywords" content={`${author} software engineer, fullstack, daily brand`}
                 />
                 <meta name="author" content={author}/>
                 <meta property="og:title" content={author}/>
